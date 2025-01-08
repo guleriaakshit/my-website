@@ -29,11 +29,16 @@ body::before {
   border-radius: 10px; /* Optional: Round the corners */
 }
 
+/* Navigation styles */
+
+.navigation {
+  text-align: center; /* Center-aligns the text */
+}
+
 /* Text styles */
 img,
 h1 {
-  border: black solid 1px;
-  padding: 1rem;
+  border: black solid 5px;
 }
 
 blockquote {
@@ -43,6 +48,10 @@ blockquote {
   text-align: center;
   border: black solid 1px;
   padding-bottom: 2rem;
+}
+
+blockquote p {
+  margin: 0;
 }
 
 cite {
@@ -56,4 +65,26 @@ cite {
 
 p {
   line-height: 2;
+}
+
+/* Media query for smaller devices */
+@media (max-width: 768px) {
+  blockquote {
+    font-size: 1.5rem; /* Reduce font size */
+    padding: 1rem; /* Adjust padding */
+    border: 0px solid black;
+  }
+
+  cite {
+    font-size: 1rem; /* Reduce cite font size */
+  }
+
+  .bigbold {
+    font-size: 1rem;
+  }
+
+  h1 {
+    border: 0px;
+    text-align: center;
+  }
 }
