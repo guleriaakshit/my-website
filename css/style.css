@@ -35,10 +35,16 @@ body::before {
   text-align: center; /* Center-aligns the text */
 }
 
-/* Text styles */
-img,
 h1 {
-  border: black solid 5px;
+  text-align: center;
+}
+
+/* Center the image */
+img {
+  display: block; /* Make it a block element */
+  margin-left: auto; /* Automatic left margin */
+  margin-right: auto; /* Automatic right margin */
+  border: black 1px solid;
 }
 
 blockquote {
@@ -46,45 +52,41 @@ blockquote {
   font-size: 3rem;
   font-style: italic;
   text-align: center;
-  border: black solid 1px;
-  padding-bottom: 2rem;
+  border: rgba(128, 128, 128, 0.56) solid 1px;
 }
 
-blockquote p {
+blockquote {
+  border-left: 5px solid rgba(128, 128, 128, 0.56); /* Left border with a grey color */
+  border-top-right-radius: 10px; /* Rounds the top right corner */
+  border-bottom-right-radius: 10px; /* Rounds the bottom right corner */
   margin: 0;
 }
 
-cite {
-  font-size: 2rem;
+figure {
+  text-align: center; /* Centers the image and caption */
+  margin: 20px auto; /* Adds spacing around the figure */
 }
 
-.bigbold {
-  font-weight: bold;
-  font-size: 1.3rem;
+figcaption {
+  font-style: italic; /* Makes the caption text italic */
+  font-size: 0.8rem; /* Makes the caption smaller */
+  color: #555; /* Changes the caption color to a grayish tone */
+  margin-top: 0.5rem; /* Adds space between the image and caption */
 }
 
 p {
-  line-height: 2;
+  line-height: 1.5;
+  text-align: center;
 }
 
 /* Media query for smaller devices */
 @media (max-width: 768px) {
   blockquote {
-    font-size: 1.5rem; /* Reduce font size */
-    padding: 1rem; /* Adjust padding */
-    border: 0px solid black;
-  }
-
-  cite {
-    font-size: 1rem; /* Reduce cite font size */
+    font-size: 0.9rem; /* Reduce font size */
+    padding: 0.9rem; /* Adjust padding */
   }
 
   .bigbold {
     font-size: 1rem;
-  }
-
-  h1 {
-    border: 0px;
-    text-align: center;
   }
 }
