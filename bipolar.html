@@ -71,40 +71,6 @@
       display: block;
     }
 
-    /* Quiz Section */
-    .quiz form {
-      margin-top: 1rem;
-    }
-
-    .quiz label {
-      display: block;
-      margin-bottom: 0.5rem;
-    }
-
-    .quiz-submit {
-      margin-top: 1rem;
-      padding: 0.5rem 1rem;
-      background: #5a91f2;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      text-align: center;
-    }
-
-    .quiz-submit:hover {
-      background: #4a7ed4;
-    }
-
-    .quiz-result {
-      margin-top: 1rem;
-      padding: 1rem;
-      background: #e2f0d9;
-      border-radius: 8px;
-      font-weight: bold;
-      color: #2e7d32;
-    }
-
     /* Footer */
     footer {
       text-align: center;
@@ -151,11 +117,6 @@
         text-align: center;
       }
 
-      .quiz-submit {
-        width: 100%;
-        padding: 0.8rem;
-      }
-
       footer {
         font-size: 0.9rem;
       }
@@ -181,11 +142,6 @@
 
       .tab-button {
         padding: 0.8rem;
-      }
-
-      .quiz-submit {
-        width: 100%;
-        padding: 1rem;
       }
 
       footer {
@@ -282,23 +238,6 @@
         </ul>
       </div>
     </section>
-
-    <section class="quiz">
-      <h2>Quiz: Test Your Knowledge</h2>
-      <form id="quiz-form">
-        <label for="question1">What is the primary symptom of a manic episode?</label>
-        <select id="question1" name="question1" required>
-          <option value="">Select an answer</option>
-          <option value="Increased energy">Increased energy</option>
-          <option value="Sadness">Sadness</option>
-          <option value="Lack of interest">Lack of interest</option>
-        </select>
-
-        <button type="submit" class="quiz-submit">Submit Answer</button>
-      </form>
-
-      <div class="quiz-result" id="quiz-result"></div>
-    </section>
   </main>
 
   <footer>
@@ -314,27 +253,10 @@
       tab.addEventListener('click', () => {
         tabs.forEach(t => t.classList.remove('active'));
         tabContents.forEach(content => content.classList.remove('active'));
-
+        
         tab.classList.add('active');
         document.getElementById(tab.dataset.tab).classList.add('active');
       });
-    });
-
-    // Quiz functionality
-    document.getElementById('quiz-form').addEventListener('submit', function (event) {
-      event.preventDefault();
-      const answer = document.getElementById('question1').value;
-      const result = document.getElementById('quiz-result');
-
-      if (answer === 'Increased energy') {
-        result.textContent = "Correct! Increased energy is a primary symptom of a manic episode.";
-        result.style.backgroundColor = "#e2f0d9";
-        result.style.color = "#2e7d32";
-      } else {
-        result.textContent = "Incorrect. The correct answer is 'Increased energy'.";
-        result.style.backgroundColor = "#fce4e4";
-        result.style.color = "#c62828";
-      }
     });
   </script>
 </body>
