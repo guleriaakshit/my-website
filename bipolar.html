@@ -277,74 +277,64 @@
             conspiring against you.</li>
           <li><strong>Loss of touch with reality:</strong> Difficulty distinguishing between what is real and what is
             imagined.</li>
-          <li><strong>Difficulty distinguishing between what’s real and what isn’t:</strong> Severe confusion about the
-            nature of one’s thoughts and experiences.</li>
+          <li><strong>Difficulty distinguishing between what’s real and what’s imagined:</strong> Experiencing confusion
+            about what is real or imaginary, making it hard to interact normally with others.</li>
         </ul>
       </div>
     </section>
 
-    <!-- Quiz Section -->
     <section class="quiz">
-      <h2>Take a Quick Quiz</h2>
-      <p>Are you experiencing symptoms? Take this short quiz to learn more.</p>
+      <h2>Quiz: Test Your Knowledge</h2>
       <form id="quiz-form">
-        <label>
-          <input type="checkbox" name="symptom" value="mania">
-          Have you experienced a sudden burst of energy lasting days?
-        </label><br>
-        <label>
-          <input type="checkbox" name="symptom" value="depression">
-          Do you often feel sad or unmotivated for weeks?
-        </label><br>
-        <label>
-          <input type="checkbox" name="symptom" value="psychosis">
-          Have you experienced delusions or hallucinations?
-        </label><br>
-        <button type="submit" class="quiz-submit">See Results</button>
+        <label for="question1">What is the primary symptom of a manic episode?</label>
+        <select id="question1" name="question1" required>
+          <option value="">Select an answer</option>
+          <option value="Increased energy">Increased energy</option>
+          <option value="Sadness">Sadness</option>
+          <option value="Lack of interest">Lack of interest</option>
+        </select>
+
+        <button type="submit" class="quiz-submit">Submit Answer</button>
       </form>
 
-      <div id="quiz-result" class="quiz-result" style="display: none;">
-        <h3>Your Results:</h3>
-        <p id="result-text"></p>
-      </div>
-    </section>
-
-    <section class="resources">
-      <h2>Resources</h2>
-      <ul>
-        <li><a href="https://www.nimh.nih.gov">NIMH: Bipolar Disorder</a></li>
-        <li><a href="https://www.bphope.com">BP Hope</a></li>
-        <li><a href="https://www.supportgroups.com">Support Groups</a></li>
-      </ul>
+      <div class="quiz-result" id="quiz-result"></div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Mental Health Awareness</p>
+    <p>&copy; 2025 Bipolar Disorder Awareness. All Rights Reserved.</p>
   </footer>
 
   <script>
-    // JavaScript to process quiz form and display results
-    const quizForm = document.getElementById('quiz-form');
-    const resultText = document.getElementById('result-text');
-    const quizResult = document.getElementById('quiz-result');
+    // Tab switching functionality
+    const tabs = document.querySelectorAll('.tab-button');
+    const tabContents = document.querySelectorAll('.tab-content');
 
-    quizForm.addEventListener('submit', function (event) {
-      event.preventDefault();
-      const formData = new FormData(quizForm);
-      let results = [];
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tabContents.forEach(content => content.classList.remove('active'));
 
-      formData.forEach((value, key) => {
-        results.push(value);
+        tab.classList.add('active');
+        document.getElementById(tab.dataset.tab).classList.add('active');
       });
+    });
 
-      if (results.length === 0) {
-        resultText.innerHTML = "You haven't selected any symptoms. Please select at least one.";
+    // Quiz functionality
+    document.getElementById('quiz-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+      const answer = document.getElementById('question1').value;
+      const result = document.getElementById('quiz-result');
+
+      if (answer === 'Increased energy') {
+        result.textContent = "Correct! Increased energy is a primary symptom of a manic episode.";
+        result.style.backgroundColor = "#e2f0d9";
+        result.style.color = "#2e7d32";
       } else {
-        resultText.innerHTML = "You may be experiencing symptoms of " + results.join(', ') + ". Please consult a healthcare professional for further evaluation.";
+        result.textContent = "Incorrect. The correct answer is 'Increased energy'.";
+        result.style.backgroundColor = "#fce4e4";
+        result.style.color = "#c62828";
       }
-
-      quizResult.style.display = 'block';
     });
   </script>
 </body>
