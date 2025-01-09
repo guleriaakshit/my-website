@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bipolar 1 Disorder - Learn and Understand</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: "Arial", sans-serif;
+      margin: 0;
+      color: #333;
+      background: #f4f4f9;
+    }
+
+    header.hero {
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+
+    header.hero h1 {
+      font-size: 2.5rem;
+    }
+
+    header.hero p {
+      font-size: 1.2rem;
+    }
+
+    /* Sections */
+    section {
+      padding: 2rem;
+      max-width: 800px;
+      margin: 2rem auto;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .tabs {
+      display: flex;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .tab-button {
+      flex: 1;
+      padding: 0.8rem;
+      border: none;
+      background: #f4f4f9;
+      cursor: pointer;
+      transition: background 0.3s;
+      text-align: center;
+    }
+
+    .tab-button.active {
+      background: #5a91f2;
+      color: white;
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    /* Quiz Section */
+    .quiz form {
+      margin-top: 1rem;
+    }
+
+    .quiz label {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .quiz-submit {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background: #5a91f2;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .quiz-submit:hover {
+      background: #4a7ed4;
+    }
+
+    .quiz-result {
+      margin-top: 1rem;
+      padding: 1rem;
+      background: #e2f0d9;
+      border-radius: 8px;
+      font-weight: bold;
+      color: #2e7d32;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #333;
+      color: white;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-image: url("../images/topography.svg");
+      background-repeat: repeat;
+      background-size: contain;
+      opacity: 0.8;
+      z-index: -1;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      header.hero h1 {
+        font-size: 2rem;
+      }
+
+      header.hero p {
+        font-size: 1rem;
+      }
+
+      section {
+        padding: 1.5rem;
+        margin: 1rem;
+      }
+
+      .tabs {
+        flex-direction: column;
+      }
+
+      .tab-button {
+        padding: 1rem;
+        text-align: center;
+      }
+
+      .quiz-submit {
+        width: 100%;
+        padding: 0.8rem;
+      }
+
+      footer {
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header.hero h1 {
+        font-size: 1.8rem;
+      }
+
+      header.hero p {
+        font-size: 0.9rem;
+      }
+
+      section {
+        padding: 1rem;
+        margin: 0.5rem;
+      }
+
+      .tabs {
+        flex-direction: column;
+      }
+
+      .tab-button {
+        padding: 0.8rem;
+      }
+
+      .quiz-submit {
+        width: 100%;
+        padding: 1rem;
+      }
+
+      footer {
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="hero">
+    <h1>Bipolar 1 Disorder</h1>
+    <p>Understand. Learn. Support.</p>
+  </header>
+
+  <main>
+    <section class="introduction">
+      <h2>What is Bipolar 1 Disorder?</h2>
+      <p>
+        Bipolar 1 Disorder is a mental health condition characterized by extreme mood swings, including episodes of
+        mania and depression.
+        This webpage aims to provide an in-depth understanding, resources, and support.
+      </p>
+    </section>
+
+    <section class="symptoms">
+      <h2>Symptoms</h2>
+      <div class="tabs">
+        <button class="tab-button active" data-tab="manic">Manic Episodes</button>
+        <button class="tab-button" data-tab="depressive">Depressive Episodes</button>
+        <button class="tab-button" data-tab="psychosis">Psychosis Episodes</button>
+      </div>
+
+      <!-- Manic Symptoms -->
+      <div class="tab-content active" id="manic">
+        <ul>
+          <li><strong>Increased energy and activity:</strong> Feeling highly energetic and restless, often leading to an
+            increase in activity levels.</li>
+          <li><strong>Decreased need for sleep:</strong> Feeling little to no need for sleep, sometimes for days at a
+            time.</li>
+          <li><strong>Racing thoughts and impulsivity:</strong> Rapidly shifting thoughts, sometimes leading to
+            impulsive actions without considering consequences.</li>
+          <li><strong>Exaggerated sense of self-importance:</strong> Feeling invincible or superior to others, which can
+            lead to grandiose behavior.</li>
+          <li><strong>Engaging in risky behaviors:</strong> Involvement in reckless activities like excessive spending,
+            dangerous driving, or risky sexual behavior.</li>
+          <li><strong>Increased talkativeness:</strong> Speaking quickly and excessively, with difficulty in stopping
+            once started.</li>
+          <li><strong>Difficulty concentrating or focusing:</strong> A scattered mind that struggles to focus on one
+            task or thought for too long.</li>
+          <li><strong>Heightened creativity:</strong> Feeling an unusual surge in creative ideas or activities, often
+            leading to excessive planning or projects.</li>
+        </ul>
+      </div>
+
+      <!-- Depressive Symptoms -->
+      <div class="tab-content" id="depressive">
+        <ul>
+          <li><strong>Feelings of sadness and hopelessness:</strong> A pervasive sense of sadness and despair that may
+            last for weeks.</li>
+          <li><strong>Lack of energy and interest in activities:</strong> Losing interest in things that used to bring
+            joy or motivation.</li>
+          <li><strong>Difficulty concentrating:</strong> Struggling to focus on tasks, making even simple activities
+            feel overwhelming.</li>
+          <li><strong>Changes in appetite:</strong> Significant weight loss or gain, often due to eating too much or too
+            little.</li>
+          <li><strong>Thoughts of death or suicide:</strong> Experiencing recurrent thoughts about death or feeling like
+            life isn't worth living.</li>
+          <li><strong>Feeling worthless or guilty:</strong> Overwhelming feelings of guilt, shame, or self-blame.</li>
+          <li><strong>Difficulty sleeping (insomnia) or oversleeping:</strong> A marked change in sleep patterns, either
+            sleeping too much or struggling to sleep.</li>
+          <li><strong>Physical symptoms:</strong> Complaints of fatigue, aches, pains, or digestive problems without
+            clear physical cause.</li>
+        </ul>
+      </div>
+
+      <!-- Psychosis Symptoms -->
+      <div class="tab-content" id="psychosis">
+        <ul>
+          <li><strong>Delusions:</strong> Holding strong beliefs that are not based in reality, such as thinking one has
+            extraordinary abilities or is being persecuted.</li>
+          <li><strong>Hallucinations:</strong> Hearing voices or seeing things that are not present, often causing
+            confusion or distress.</li>
+          <li><strong>Disorganized thinking:</strong> Difficulty connecting thoughts logically, leading to incoherent or
+            nonsensical speech.</li>
+          <li><strong>Incoherent speech:</strong> Speaking in a way that is hard for others to follow, often jumping
+            from one topic to another without clear transitions.</li>
+          <li><strong>Paranoia:</strong> A persistent feeling of being watched, persecuted, or that others are
+            conspiring against you.</li>
+          <li><strong>Loss of touch with reality:</strong> Difficulty distinguishing between what is real and what is
+            imagined.</li>
+          <li><strong>Difficulty distinguishing between what’s real and what isn’t:</strong> Severe confusion about the
+            nature of one’s thoughts and experiences.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section class="quiz">
+      <h2>Take a Quick Quiz</h2>
+      <p>Are you experiencing symptoms? Take this short quiz to learn more.</p>
+      <form id="quiz-form">
+        <label>
+          <input type="checkbox" name="symptom" value="mania">
+          Have you experienced a sudden burst of energy lasting days?
+        </label><br>
+        <label>
+          <input type="checkbox" name="symptom" value="depression">
+          Do you often feel sad or unmotivated for weeks?
+        </label><br>
+        <label>
+          <input type="checkbox" name="symptom" value="psychosis">
+          Have you experienced delusions or hallucinations?
+        </label><br>
+        <button type="submit" class="quiz-submit">See Results</button>
+      </form>
+
+      <div id="quiz-result" class="quiz-result" style="display: none;">
+        <h3>Your Results:</h3>
+        <p id="result-text"></p>
+      </div>
+    </section>
+
+    <section class="resources">
+      <h2>Resources</h2>
+      <ul>
+        <li><a href="https://www.nimh.nih.gov">NIMH: Bipolar Disorder</a></li>
+        <li><a href="https://www.bphope.com">BP Hope</a></li>
+        <li><a href="https://www.supportgroups.com">Support Groups</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Mental Health Awareness</p>
+  </footer>
+
+  <script>
+    // JavaScript to process quiz form and display results
+    const quizForm = document.getElementById('quiz-form');
+    const resultText = document.getElementById('result-text');
+    const quizResult = document.getElementById('quiz-result');
+
+    quizForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+      const formData = new FormData(quizForm);
+      let results = [];
+
+      formData.forEach((value, key) => {
+        results.push(value);
+      });
+
+      if (results.length === 0) {
+        resultText.innerHTML = "You haven't selected any symptoms. Please select at least one.";
+      } else {
+        resultText.innerHTML = "You may be experiencing symptoms of " + results.join(', ') + ". Please consult a healthcare professional for further evaluation.";
+      }
+
+      quizResult.style.display = 'block';
+    });
+  </script>
+</body>
+
+</html>
