@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bee Happy!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@400;600&display=swap"
+    rel="stylesheet">
+  <style>
+    /* Background pattern as a CSS pseudo-element */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-image: url("../images/circuit.svg");
+      background-repeat: repeat;
+      background-size: auto;
+      opacity: 0.8;
+      z-index: -1;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #fff8dc;
+      /* Matches honeycomb theme */
+    }
+
+    h1 {
+      font-family: 'Fredoka One', cursive;
+      font-size: 3rem;
+      color: #f4a261;
+      margin: 20px 0;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #6b705c;
+      max-width: 600px;
+      line-height: 1.6;
+    }
+
+    img {
+      width: 300px;
+      height: auto;
+      margin: 20px 0;
+    }
+
+    /* Media Queries for Smaller Screens */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+        margin: 0 10%;
+      }
+
+      img {
+        width: 250px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+        margin: 0 10%; /* Adds 10% margin on each side */
+        text-align: center; /* Centers the text */
+      }
+
+      img {
+        width: 200px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <img src="images/bee-drawn.gif" alt="Bee flying animation" title="Busy Bee in Action!" loading="lazy">
+
+  <h1>Bee Your Best Self! 🐝</h1>
+
+  <p>Buzz buzz! Life’s too short to not enjoy the honey 🍯. Take a flight, wiggle your dance, and don’t forget to
+    bee-lieve in yourself! 🐝✨</p>
+</body>
+
+</html>
