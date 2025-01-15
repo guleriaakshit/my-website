@@ -1,0 +1,62 @@
+/* Ensure full-page background */
+html,
+body {
+  height: 100%;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../images/topography.svg");
+  background-repeat: repeat;
+  background-size: contain;
+  opacity: 0.6;
+  z-index: -1;
+}
+
+/* Navigation styles */
+
+.navigation {
+  text-align: center; /* Center-aligns the text */
+}
+
+h1 {
+  text-align: center;
+}
+
+blockquote {
+  font-size: 1.5rem;
+  font-style: italic;
+  text-align: center;
+  border: rgba(128, 128, 128, 0.56) solid 2px;
+  border-left: 5px solid rgba(128, 128, 128, 0.56);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin: 0;
+  padding: 1rem;
+}
+
+p, cite, ol li, h1 {
+  color: rgb(128, 128, 128);
+  line-height: 1.5;
+}
+
+/* Media query for smaller devices */
+@media (max-width: 768px) {
+  blockquote {
+    font-size: 0.9rem; /* Reduce font size */
+    padding: 0.9rem; /* Adjust padding */
+  }
+
+  .bigbold {
+    font-size: 1rem;
+  }
+}
