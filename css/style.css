@@ -7,39 +7,42 @@ body {
   position: relative;
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-image: url("../images/topography.svg");
-  background-repeat: repeat;
-  background-size: contain;
-  opacity: 0.8;
-  z-index: -1;
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
 }
 
-/* Center and constrain the content */
-.content {
-  max-width: 80%; /* Content width is 80% of the page */
-  margin: 0 auto; /* Center the content */
-  padding: 20px; /* Add some padding */
-  border-radius: 10px; /* Optional: Round the corners */
+nav li {
+  width: 10rem;
+  background-color: lightgray;
+  text-align: center;
+  display: inline-block;
 }
 
-/* Navigation styles */
+nav a {
+  font-size: 1.3rem;
+  text-decoration: none;
+  display: block;
+  padding: 0.5rem;
+}
 
-.navigation {
-  text-align: center; /* Center-aligns the text */
+nav a:link {
+  color: black;
+}
+
+nav a:hover {
+  background-color: black;
+  color: lightgray;
+  text-decoration: underline;
 }
 
 h1 {
   text-align: center;
 }
 
-/* Center the image */
+/* Center the image (Chat-GPT) */
 img {
   display: block; /* Make it a block element */
   margin-left: auto; /* Automatic left margin */
