@@ -4,26 +4,305 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Music World</title>
-  <link href="css/style.css" rel="stylesheet">
+  <title>MusicWorld | Album Ratings</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/music.css">
 </head>
 
 <body>
   <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="bipolar.html">Bipolar</a></li>
-
-    </ul>
+    <div class="nav-container">
+      <div class="logo">🎧 MusicWorld</div>
+      <ul class="nav-links">
+        <li><a href="#home" class="active">Albums</a></li>
+        <li><a href="#genres">Genres</a></li>
+        <li><a href="#charts">Charts</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </div>
   </nav>
 
-  <h1>My Favorite Artists</h1>
-  <p>These are my favorite artists of all time.</p>
-  <ul>
-    <li>Eminem</li>
-    <li>Billie Eilish</li>
-    <li>JPEGMAFIA</li>
-  </ul>
+  <main class="container">
+    <h1>🎶 Top Rated Albums</h1>
+
+    <div class="album-grid">
+      <!-- The Weeknd - After Hours -->
+      <div class="album-card">
+        <div class="album-emoji">🌃</div>
+        <div class="album-info">
+          <h2 class="album-title">After Hours</h2>
+          <p class="artist-name">The Weeknd</p>
+        </div>
+        <div class="score-container">
+          <div class="score-row">
+            <span class="score-type">Critic</span>
+            <span class="score-value">79</span>
+            <div class="rating-bar">
+              <div class="rating-fill" style="width: 79%"></div>
+            </div>
+          </div>
+          <div class="score-row">
+            <span class="score-type">User</span>
+            <span class="score-value">82</span>
+            <div class="rating-bar">
+              <div class="rating-fill" style="width: 82%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Radiohead - OK Computer -->
+      <div class="album-card">
+        <div class="album-emoji">🤖</div>
+        <div class="album-info">
+          <h2 class="album-title">OK Computer</h2>
+          <p class="artist-name">Radiohead</p>
+        </div>
+        <div class="score-container">
+          <div class="score-row">
+            <span class="score-type">Critic</span>
+            <span class="score-value">94</span>
+            <div class="rating-bar">
+              <div class="rating-fill" style="width: 94%"></div>
+            </div>
+          </div>
+          <div class="score-row">
+            <span class="score-type">User</span>
+            <span class="score-value">93</span>
+            <div class="rating-bar">
+              <div class="rating-fill" style="width: 93%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kendrick Lamar - To Pimp a Butterfly -->
+      <div class="album-card">
+        <div class="album-emoji">🦋</div>
+        <div class="album-info">
+          <h2 class="album-title">To Pimp a Butterfly</h2>
+          <p class="artist-name">Kendrick Lamar</p>
+        </div>
+        <div class="score-container">
+          <div class="score-row">
+            <span class="score-type">Critic</span>
+            <span class="score-value">95</span>
+            <div class="rating-bar">
+              <div class="rating-fill" style="width: 95%"></div>
+            </div>
+          </div>
+          <div class="score-row">
+            <span class="score-type">User</span>
+            <span class="score-value">95</span>
+            <div class="rating-bar">
+              <div class="rating-fill" style="width: 95%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Additional Albums -->
+      <!-- Billie Eilish - HIT ME HARD AND SOFT -->
+      <div class="album-card">
+        <div class="album-emoji">🌌</div>
+        <div class="album-info">
+          <h2 class="album-title">HIT ME HARD AND SOFT</h2>
+          <p class="artist-name">Billie Eilish</p>
+        </div>
+        <div class="score-container">
+          <div class="score-row">
+            <span class="score-type">Critic</span>
+            <span class="score-value">86</span>
+            <div class="rating-bar">
+              <div class="rating-fill" style="width: 86%"></div>
+            </div>
+          </div>
+          <div class="score-row">
+            <span class="score-type">User</span>
+            <span class="score-value">82</span>
+            <div class="rating-bar">
+              <div class="rating-fill" style="width: 82%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Michael Jackson - Thriller -->
+      <div class="album-card">
+        <div class="album-emoji">🧟</div>
+        <div class="album-info">
+          <h2 class="album-title">Thriller</h2>
+          <p class="artist-name">Michael Jackson</p>
+        </div>
+        <div class="score-container">
+          <div class="score-row">
+            <span class="score-type">Critic</span>
+            <span class="score-value">97</span>
+            <div class="rating-bar">
+              <div class="rating-fill" style="width: 97%"></div>
+            </div>
+          </div>
+          <div class="score-row">
+            <span class="score-type">User</span>
+            <span class="score-value">89</span>
+            <div class="rating-bar">
+              <div class="rating-fill" style="width: 89%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Daft Punk - Random Access Memories -->
+      <div class="album-card">
+        <div class="album-emoji">🤖</div>
+        <div class="album-info">
+          <h2 class="album-title">Random Access Memories</h2>
+          <p class="artist-name">Daft Punk</p>
+        </div>
+        <div class="score-container">
+          <div class="score-row">
+            <span class="score-type">Critic</span>
+            <span class="score-value">83</span>
+            <div class="rating-bar">
+              <div class="rating-fill" style="width: 83%"></div>
+            </div>
+          </div>
+          <div class="score-row">
+            <span class="score-type">User</span>
+            <span class="score-value">87</span>
+            <div class="rating-bar">
+              <div class="rating-fill" style="width: 87%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pink Floyd - The Dark Side of the Moon -->
+      <div class="album-card">
+        <div class="album-emoji">🌑</div>
+        <div class="album-info">
+          <h2 class="album-title">The Dark Side of the Moon</h2>
+          <p class="artist-name">Pink Floyd</p>
+        </div>
+        <div class="score-container">
+          <div class="score-row">
+            <span class="score-type">Critic</span>
+            <span class="score-value">97</span>
+            <div class="rating-bar">
+              <div class="rating-fill" style="width: 97%"></div>
+            </div>
+          </div>
+          <div class="score-row">
+            <span class="score-type">User</span>
+            <span class="score-value">91</span>
+            <div class="rating-bar">
+              <div class="rating-fill" style="width: 91%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kanye West - My Beautiful Dark Twisted Fantasy -->
+      <div class="album-card">
+        <div class="album-emoji">👑</div>
+        <div class="album-info">
+          <h2 class="album-title">My Beautiful Dark Twisted Fantasy</h2>
+          <p class="artist-name">Kanye West</p>
+        </div>
+        <div class="score-container">
+          <div class="score-row">
+            <span class="score-type">Critic</span>
+            <span class="score-value">91</span>
+            <div class="rating-bar">
+              <div class="rating-fill" style="width: 91%"></div>
+            </div>
+          </div>
+          <div class="score-row">
+            <span class="score-type">User</span>
+            <span class="score-value">89</span>
+            <div class="rating-bar">
+              <div class="rating-fill" style="width: 89%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nirvana - Nevermind -->
+      <div class="album-card">
+        <div class="album-emoji">👶</div>
+        <div class="album-info">
+          <h2 class="album-title">Nevermind</h2>
+          <p class="artist-name">Nirvana</p>
+        </div>
+        <div class="score-container">
+          <div class="score-row">
+            <span class="score-type">Critic</span>
+            <span class="score-value">91</span>
+            <div class="rating-bar">
+              <div class="rating-fill" style="width: 91%"></div>
+            </div>
+          </div>
+          <div class="score-row">
+            <span class="score-type">User</span>
+            <span class="score-value">90</span>
+            <div class="rating-bar">
+              <div class="rating-fill" style="width: 90%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Frank Ocean - Blonde -->
+      <div class="album-card">
+        <div class="album-emoji">👱</div>
+        <div class="album-info">
+          <h2 class="album-title">Blonde</h2>
+          <p class="artist-name">Frank Ocean</p>
+        </div>
+        <div class="score-container">
+          <div class="score-row">
+            <span class="score-type">Critic</span>
+            <span class="score-value">86</span>
+            <div class="rating-bar">
+              <div class="rating-fill" style="width: 86%"></div>
+            </div>
+          </div>
+          <div class="score-row">
+            <span class="score-type">User</span>
+            <span class="score-value">89</span>
+            <div class="rating-bar">
+              <div class="rating-fill" style="width: 89%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kendrick Lamar - DAMN. -->
+      <div class="album-card">
+        <div class="album-emoji">💥</div>
+        <div class="album-info">
+          <h2 class="album-title">DAMN.</h2>
+          <p class="artist-name">Kendrick Lamar</p>
+        </div>
+        <div class="score-container">
+          <div class="score-row">
+            <span class="score-type">Critic</span>
+            <span class="score-value">93</span>
+            <div class="rating-bar">
+              <div class="rating-fill" style="width: 93%"></div>
+            </div>
+          </div>
+          <div class="score-row">
+            <span class="score-type">User</span>
+            <span class="score-value">85</span>
+            <div class="rating-bar">
+              <div class="rating-fill" style="width: 85%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- Closing album-grid -->
+  </main>
 </body>
 
 </html>
