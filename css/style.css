@@ -44,40 +44,18 @@ img {
   display: block; /* Make it a block element */
   margin-left: auto; /* Automatic left margin */
   margin-right: auto; /* Automatic right margin */
-  border: black 1px solid;
 }
 
 blockquote {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 3rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
   font-style: italic;
   text-align: center;
-  border: rgba(128, 128, 128, 0.56) solid 1px;
-}
-
-blockquote {
-  border-left: 5px solid rgba(128, 128, 128, 0.56); /* Left border with a grey color */
-  border-top-right-radius: 10px; /* Rounds the top right corner */
-  border-bottom-right-radius: 10px; /* Rounds the bottom right corner */
-  margin: 0;
-}
-
-figure {
-  text-align: center; /* Centers the image and caption */
-  margin: 20px auto; /* Adds spacing around the figure */
-}
-
-figcaption {
-  font-style: italic; /* Makes the caption text italic */
-  font-size: 0.8rem; /* Makes the caption smaller */
-  color: #555; /* Changes the caption color to a grayish tone */
-  margin-top: 0.5rem; /* Adds space between the image and caption */
 }
 
 p {
   line-height: 1.5;
   text-align: center;
-  color: red;
 }
 
 /* Media query for smaller devices */
