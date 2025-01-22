@@ -74,7 +74,7 @@ p {
     padding: 0rem; /* Adjust padding */
   }
 
-  .bigbold {
-    font-size: 1rem;
+  nav li {
+    width: 5rem;
   }
 }
