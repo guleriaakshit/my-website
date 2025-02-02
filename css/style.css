@@ -1,17 +1,18 @@
+/* General styles for body */
 body {
   font-family: Arial, Helvetica, sans-serif;
   width: 70%;
   margin: 0 auto 3rem auto;
 }
 
+/* Navigation bar styles */
 nav ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
   display: flex;
-  flex-flow: row nowrap;
   justify-content: center;
-  column-gap: 1rem;
+  gap: 1rem;
 }
 
 nav li {
@@ -27,84 +28,108 @@ nav a {
   padding: 0.5rem;
 }
 
-nav a:link {
-  color: black;
-}
-
 nav a:hover {
   background-color: black;
   color: lightgray;
   text-decoration: underline;
 }
 
+/* Center-align headings */
 h2,
 h3 {
   text-align: center;
 }
 
+/* Image container styles */
 .image-container {
-  margin: 0;
-  padding: 0;
   display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-items: center; /* Center content horizontally */
+  flex-direction: column;
+  align-items: center;
   gap: 2rem;
   margin: 2rem 0;
 }
 
 .image-container div img {
-  max-width: 100%; /* Ensures the image is responsive */
+  max-width: 100%;
   height: auto;
   border-radius: 10px;
 }
 
+/* Styling for blockquotes */
 blockquote {
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 1.3rem;
   font-style: italic;
   text-align: center;
-  border: 0px solid black;
-  margin: 0;
 }
 
-blockquote p {
-  margin: 0;
-}
-
+/* Center-align paragraphs */
 p {
   line-height: 1.5;
   text-align: center;
 }
 
-fieldset {
-  border: 1px solid black;
-  border-radius: 10px;
-  margin: 1rem;
+/* Form Styling */
+form {
+  text-align: center;
 }
 
+/* Fieldset styles */
+fieldset {
+  width: 100%;
+  max-width: 400px;
+  margin: 1rem auto;
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+/* Style for legend */
 legend {
   font-size: 1.2rem;
   font-weight: bold;
-  padding: 1rem;
 }
 
+/* Align labels properly */
 label {
   display: block;
-  margin: 1rem;
+  margin: 0.5rem;
 }
 
+/* Centering input fields */
+input {
+  display: block;
+  width: 90%;
+  margin: 5px auto;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Ensure radio buttons stay on one line */
+.radio-group {
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start;
+}
+
+/* Centering the button */
 button {
-padding: 0 2rem;
-background-color: red;
-color: white;
-border-radius: 5px;}
+  padding: 0.5rem 2rem;
+  font-size: 1.2rem;
+  background-color: red;
+  color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  display: block;
+  margin: 1rem auto;
+}
 
 /* Media query for smaller devices */
 @media (max-width: 768px) {
   blockquote {
     font-size: 1.3rem;
-    padding: 0rem; /* Adjust padding */
   }
 
   nav li {
