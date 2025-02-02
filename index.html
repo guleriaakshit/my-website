@@ -17,33 +17,87 @@
         <li><a href="music.html">Music</a></li>
       </ul>
     </nav>
-    <figure>
-      <img src="images/yin-yang-symbol.svg" alt="Yin Yang Symbol" title="Yin Yang Symbol" width="200">
-    </figure>
+    <div class="image-container">
+      <div>
+        <img src="images/code.jpg" alt="Yin Yang Symbol" title="Yin Yang Symbol" width="600">
+      </div>
+      <div>
+        <blockquote>
+          <p>Simplicity is the ultimate form of sophistication</p>
+        </blockquote>
+        <h2>About Me</h2>
+        <p>Hi, I'm Akshit Guleria, a passionate individual from Himachal Pradesh, exploring the
+          intersection of
+          technology, design, and creativity.</p>
 
-    <blockquote>
-      <p>Simplicity is the ultimate form of sophistication</p>
-    </blockquote>
+        <p>From growing up amidst the serene mountains to diving into web development, my journey has been a constant
+          learning experience.</p>
 
-    <p>Hi, I'm Akshit Guleria, a passionate individual from Himachal Pradesh 🌄, exploring the
-      intersection of
-      technology, design, and creativity.</p>
+        <p>I enjoy working with HTML, CSS, JavaScript, and React, and I believe technology should be intuitive and
+          accessible for everyone.</p>
 
-    <p>From growing up amidst the serene mountains to diving into web development, my journey has been a constant
-      learning experience.</p>
+        <p>On this website, I share my personal experiences, lessons learned, and upcoming projects.</p>
 
-    <p>I enjoy working with HTML, CSS, JavaScript, and React, and I believe technology should be intuitive and
-      accessible for everyone.</p>
+        <p>I also write about life in Himachal and how the beauty of nature influences my work.</p>
 
-    <p>On this website, I share my personal experiences, lessons learned, and upcoming projects.</p>
+        <p>My goal is to continuously improve my skills, contribute to the tech community, and create user-centered
+          solutions.</p>
 
-    <p>I also write about life in Himachal and how the beauty of nature influences my work.</p>
+        <p>Feel free to connect with me for collaboration, discussions, or any exciting projects!</p>
+      </div>
+    </div>
+    <h2>Contact Form</h2>
+    <p>Feel free to reach out! Whether you have a project idea, collaboration opportunity, or
+      just want to say hello, I'd love to hear from you.</p>
+    <form>
+      <fieldset>
 
-    <p>My goal is to continuously improve my skills, contribute to the tech community, and create user-centered
-      solutions.</p>
+        <legend>Your Contact Information</legend>
 
-    <p>Feel free to connect with me for collaboration, discussions, or any exciting projects! 🤝</p>
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
 
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="phone">Phone Number (optional)</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+
+      </fieldset>
+
+      <fieldset>
+
+        <legend>Project Information</legend>
+
+        <label for="project-start-date">Project Start Date</label>
+        <input type="date" id="project-start-date" name="project-start-date">
+
+        <label for="budget">Budget (USD)</label>
+        <input type="number" id="budget" name="budget" min="100" max="10000">
+
+        <p>What is the type of your project?</p>
+        <label>
+          <input type="radio" name="project-type" value="web-dev"> Web Development
+        </label>
+
+        <label>
+          <input type="radio" name="project-type" value="ui-ux"> UI/UX Design
+        </label>
+
+        <label>
+          <input type="radio" name="project-type" value="consultation"> Consultation
+        </label>
+
+        <label>
+          <input type="radio" name="project-type" value="Other"> Other
+        </label>
+
+      </fieldset>
+<button>Submit</button>
+      <p class="note">I’ll get back to
+        you as soon as possible. Thanks for reaching out!</p>
+
+    </form>
   </div>
 </body>
 
