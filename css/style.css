@@ -1,4 +1,4 @@
-/* variables declared here - these are the colors for our pages, as well as the font stacks and sizes. */
+/* Root variables - defining color scheme, font stacks, and default font sizes */
 :root {
   --black: #171321;
   --dkblue: #0d314b;
@@ -11,7 +11,8 @@
   --mono: "Oxygen mono", monospace;
   --sans: Oxygen, sans-serif;
 }
-/* border box model: https://css-tricks.com/box-sizing/ */
+
+/* Box-sizing rule to ensure all elements include padding and border in their size calculations */
 html {
   box-sizing: border-box;
 }
@@ -21,6 +22,7 @@ html {
   box-sizing: inherit;
 }
 
+/* Base styles for the body */
 body {
   padding: 0;
   margin: 0;
@@ -30,54 +32,63 @@ body {
   font-size: var(--font-size);
 }
 
+/* Navbar styling */
 nav {
   font-family: var(--mono);
   font-size: 80%;
   padding: 1rem;
 }
 
+/* Font Awesome icons inside nav */
 nav [class*="fa-"] {
   font-size: 180%;
   color: var(--aqua);
 }
 
+/* Icons inside h1 should be slightly smaller */
 nav h1 [class*="fa-"] {
   font-size: 100%;
   color: var(--aqua);
   margin: 0.5rem;
 }
 
+/* Styling for the main heading inside the navbar */
 nav h1 a {
   font-family: var(--sans);
 }
 
+/* Navigation list styles */
 nav ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
   display: flex;
-  flex-flow: row wrap;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 2rem;
 }
 
+/* Ensuring first list item takes full width on small screens */
 nav li:first-child {
   flex-basis: 100%;
   text-align: center;
 }
 
+/* Navbar links */
 nav a {
   color: var(--white);
   text-decoration: none;
   display: block;
 }
 
+/* Navbar link hover effects */
 nav a:hover,
 nav [class*="fa-"]:hover {
   color: var(--magenta);
 }
 
+/* Button styles */
 .button {
   color: var(--white);
   background-color: var(--magenta);
@@ -87,11 +98,13 @@ nav [class*="fa-"]:hover {
   text-decoration: none;
 }
 
+/* Button hover effect */
 .button:hover {
   color: var(--white);
   background-color: var(--hotmag);
 }
 
+/* Reset margins for heading elements */
 h1,
 h2,
 h3,
@@ -99,34 +112,41 @@ h4 {
   margin: 0;
 }
 
+/* Default link styling */
 a {
   color: var(--magenta);
 }
 
+/* Link hover effect */
 a:hover {
   color: var(--hotmag);
   text-decoration: none;
 }
 
+/* Ensure images are responsive */
 img {
   width: 100%;
 }
 
+/* Intro section */
 #intro {
   padding: 4rem 1rem 10rem 1rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
+/* Paragraph styles inside intro section */
 #intro p {
   font-size: 1rem;
   line-height: 1.5;
 }
 
+/* Special styling for highlighted name */
 #intro .name {
   font-family: var(--mono);
 }
 
+/* Large styled text inside name */
 .name span {
   font-family: var(--sans);
   font-size: 4rem;
@@ -134,11 +154,13 @@ img {
   display: block;
 }
 
+/* Headings inside intro section */
 #intro h2 {
   font-size: 4rem;
   font-weight: lighter;
 }
 
+/* Section-specific background colors */
 .section-plum {
   background-color: var(--plum);
 }
@@ -147,6 +169,7 @@ img {
   background-color: var(--dkblue);
 }
 
+/* Gradient separator line */
 .gradient {
   background: linear-gradient(
     90deg,
@@ -156,24 +179,29 @@ img {
   height: 2px;
 }
 
+/* Projects section */
 #projects {
   padding: 4rem 1rem;
 }
 
+/* Projects section headings */
 #projects h2 {
   font-size: 2.5rem;
   margin-bottom: calc(2.5rem * 1.5);
 }
 
+/* Subheading in projects section */
 #projects h3 {
   color: var(--aqua);
 }
 
+/* Small subheadings */
 #projects h4 {
   font-size: 1rem;
   font-family: var(--mono);
 }
 
+/* Styling for black content boxes */
 .black-box {
   background-color: var(--black);
   padding: 1rem;
@@ -183,17 +211,19 @@ img {
   line-height: 1.5;
 }
 
+/* List styling inside projects section */
 #projects ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
   display: flex;
-  flex-flow: row wrap;
+  flex-wrap: wrap;
   justify-content: flex-start;
   gap: 1rem;
   font-size: 1rem;
 }
 
+/* Project images */
 #projects img {
   margin: 2rem 0 4rem 0;
   border-left: 1px solid var(--aqua);
@@ -202,6 +232,7 @@ img {
   border-radius: 25px;
 }
 
+/* Contact section styling */
 #contact {
   text-align: center;
   margin: 0 auto;
@@ -209,46 +240,58 @@ img {
   width: 400px;
 }
 
+/* Add spacing for last paragraph inside contact section */
 #contact p:last-child {
   margin-top: 3rem;
 }
 
+/* Footer styles */
 footer {
   padding: 4rem 0;
   text-align: center;
 }
 
+/* Footer list styles */
 footer ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
   display: flex;
-  flex-flow: row wrap;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 1rem;
 }
 
+/* Footer icons */
 footer li [class*="fa-"] {
   font-size: 200%;
   color: var(--aqua);
   margin: 0.5rem;
 }
 
-/* Media queries are for desktop environments as we will be building with mobile first approach*/
-
-@media (min-width: 550px) {
+/* Media Queries for larger screens (Desktop) */
+@media (min-width: 850px) {
+  /* Grid layout for project articles */
   article {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     gap: 1rem;
   }
 
+  /* Center projects section */
+  #projects {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* Project images positioned inside grid */
   #projects img {
     grid-column: 1/6;
     grid-row: 1/2;
   }
 
+  /* Text section styling */
   .text {
     order: 2;
     text-align: right;
@@ -256,6 +299,7 @@ footer li [class*="fa-"] {
     grid-row: 1/2;
   }
 
+  /* Reversed layout for alternating projects */
   #projects .reverse .text {
     grid-column: 1/7;
     order: 2;
@@ -273,14 +317,15 @@ footer li [class*="fa-"] {
 
   #projects ul {
     justify-content: flex-end;
-}
+  }
 
-@media (min-width: 850px) {
+  /* Navbar layout for desktop */
   nav {
     max-width: 1200px;
     margin: 0 auto;
   }
 
+  /* Adjust first list item inside nav */
   nav li:first-child {
     flex-basis: auto;
     text-align: left;
